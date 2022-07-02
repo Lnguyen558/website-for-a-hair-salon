@@ -559,4 +559,163 @@ hr{
 
 
 }
+
+/* end format of section for testimonial */
     
+
+/* format the section for service */
+#footer{
+    padding: 100px 0 20px;
+    background: #efefef;
+    position: relative;
+  
+}
+
+/* begin of format for fotter section */
+
+/* format the footer row div */
+.footer-row{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+
+
+
+ 
+    
+}
+
+/* format the footer left div */
+.footer-left{
+    flex-basis: 45%;
+    padding: 10px;
+    margin-bottom: 20px;
+   
+
+    background: red;
+
+
+}
+
+/* format the footer right div */
+.footer-right{
+    flex-basis: 45%;
+    padding: 10px;
+    margin-bottom:  20px;
+    text-align: right;
+
+    background: orange;
+    
+}
+
+/* format the footer left and right h1 */
+.footer-row h1
+{
+    margin: 10px 0;
+    font-family: sans-serif;
+    color: white;
+}
+
+/* format the footer left and right p */
+.footer-row p
+{
+    line-height: 35px;
+}
+
+/* change color of icon infront of schedule and address */
+.footer-left .fa , .footer-right .fa{
+    font-size: 20px;
+    color: #009688;
+    margin: 10px;
+
+}
+
+/* format footer image */
+.footer-img{
+    max-width: 370px;
+    /* use opacity to blurry the image , higher number clearer image */
+    opacity: 0.1;
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%, -50%);
+    
+}
+
+
+/* format social link div */
+.social-links{
+    text-align: center;
+
+}
+
+
+/* format social link icon  */
+.social-links .fa{
+    height: 40px;
+    width: 40px;
+    font-size: 20px;
+    line-height: 40px;
+    border: 1px solid #009688;
+    border-radius: 50%;
+    margin: 40px 5px 0;
+    color: white;
+    background: #009688;
+    cursor: pointer;
+    transition: 0.5s;
+
+}
+
+
+
+/* add hover effect to icon */
+.social-links .fa:hover {
+    background: yellow;
+    color: red;
+    transform: translateY(-10px);
+
+}
+
+/* format the copyright p */
+.social-links p{
+    font-size: 12px;
+    margin-top: 20px;
+    font-family: sans-serif;
+    font-style: italic;
+    color: red;
+}
+
+/* format for smaller screen for footer div */
+@media screen  and (max-width: 770px)
+{
+
+    .footer-left, .footer-right{
+        flex-basis: 100%;
+        font-size: 14px;
+    }
+
+    /* add on to change the order of footer left and right 
+    for smaller screen */
+    .footer-left{
+        order: 2;
+    }
+
+
+    .footer-right{
+        order: 1;
+    }
+
+    /* make footer img smaller for smaller screen */
+    .footer-img{
+        width: 50%;
+        top:25%;
+    }
+
+
+
+}
+
+
