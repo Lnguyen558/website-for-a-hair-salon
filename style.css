@@ -1,0 +1,562 @@
+/* reset page to margin 0 and padding 0 */
+*
+{
+    margin: 0;
+    padding: 0;
+    
+    /* this font is from google font
+    https://fonts.google.com/specimen/Poppins?query=poppins 
+    */
+    font-family: 'Poppins', sans-serif;
+}
+
+/* reset all image to 100% */
+img
+{
+ max-width: 100%;
+}
+
+/* format the background image */
+#banner{
+    /* use linear gradient to add a layer color to the background image */
+    background: linear-gradient(rgba(0,0,0,0.5), #009688), url(img/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+
+}
+
+/* format the business logo */
+.logo
+{
+    width: 140px;
+    position: absolute;
+    top: 4%;
+    left: 10%;
+
+}
+
+/* format the banner text div */
+.banner-text{
+    text-align: center;
+    color: white;
+    padding-top: 180px;
+
+}
+
+/* format the banner text h1 */
+.banner-text h1 {
+    font-size: 130px;
+
+    /* this font kaushan from font google copy the css style from Google. Link to 
+    https://fonts.google.com/specimen/Poppins?query=poppins  from google */
+    font-family: 'Kaushan Script', cursive;
+}
+
+/* format the banner text  p */
+.banner-text p {
+    font-size: 20px;
+    font-style: italic;
+}
+
+/* format banner button find out and read more */
+.banner-btn{
+
+    /* margin with 3 value top , rightandleft, bottom */
+    margin: 70px auto 0;
+
+}
+
+/* format banner button a */
+.banner-btn a {
+    color: #fff;
+    width: 150px;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 12px 0;
+    display: inline-block;
+    border: 0.5px solid white;
+    /* use this to set this a as an anchor for the 
+    next format for span */
+    position: relative;
+    z-index: 1;
+    transition: color 0.5s;
+}
+
+/* format banner button span
+to make a white color in 10% of the button */
+.banner-btn span {
+    width: 10%;
+    height: 100%;
+    position: absolute;
+    /* this top and left to move to beggining of 
+    the button a */
+    top: 0 ;
+    left: 0;
+    background: white;
+    z-index: -1;
+    transition: 0.5s;
+
+}
+
+/* make the banner a moving when hover */
+.banner-btn a:hover span{
+    width: 90%;
+}
+
+/* make the banner text change color when hover */
+.banner-btn a:hover {
+    color: black;
+    
+}
+
+/* format the sidebar div */
+#side-nav{
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -250;
+    z-index: 1;
+    background: #009688;
+    transition: 2s;
+}
+
+/* fomrat nav ul li */
+nav ul li{
+    list-style: none;
+
+    /* margin 2 value mean topright 50px and left right 20px */
+    margin: 30px 30px;
+   
+}
+
+/* fomrat nav ul li a */
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* format meu button div */
+#menu-btn{
+    width: 50px;
+    height: 50px;
+    background: #009688;
+    text-align: center;
+    position: fixed;
+    z-index: 3;
+    top: 20px;
+    right: 30px;
+    border-radius: 3px;
+    cursor: pointer;
+
+}
+
+/* fomrat menu button image */
+#menu-btn img{
+    width: 20px;
+    margin-top: 15px;
+
+}
+
+/* format the menu div for smaller screen / mobiel device */
+@media screen and (max-width: 770px)
+{
+    .banner-text h1{
+        font-size: 44px;
+        color: red;
+    }
+
+    .banner-btn a{
+        display: block;
+        margin: 20px auto;
+    }
+
+    /* format the sidebar div */
+    #side-nav{
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -200;
+    z-index: 1;
+    background: #067267;
+    transition: 3s;
+}   
+
+
+
+
+/* fomrat nav ul li a */
+nav ul li a {
+    text-decoration: none;
+    color: red;
+    font-family: sans-serif;
+}
+
+}
+/* end of @media */
+
+
+/* start of section for Features Why Choose Us */
+/* format feature section */
+#feature{
+    width: 100%;
+    padding: 70px 0;
+   
+}
+
+/* format feature text */
+.title-text{
+    text-align: center;
+    padding-bottom: 70px;
+
+}
+    
+.title-text p{
+    margin: auto;
+    font-size: 20px;
+    color: #009688;
+    font-size: bold;
+    font-family: sans-serif;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+}
+
+/* to make a green leaf icon on top of feature */
+.title-text p::after{
+    content: '';
+    width: 50px;
+    height:35px ;
+    background: linear-gradient(#019587, #fff);
+    position: absolute;
+    top: -20px;
+    left: 0;
+    z-index: -1;
+    transform: rotate(8deg);
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    
+}
+
+
+.title-text h1{
+ 
+    font-size: 50px;
+
+    font-family: sans-serif;
+}
+
+
+/* fomrat the feature box */
+.feature-box{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+}
+
+/* format features div */
+.features{
+    flex-basis: 50%;
+}
+
+/* format feature box h1 */
+.features h1{
+    font-family: sans-serif;
+    color: #009688;
+    text-align: left;
+    margin-bottom: 10px;
+    font-weight: 100;
+}
+
+/* format feature image div */
+.features-img{
+    flex-basis: 50%;
+    margin: auto;
+    
+
+}
+
+/* format feature image  */
+.features-img img{
+    width: 70%;
+    border-radius: 10px;
+}
+
+/* format feature desc div */
+.features-desc{
+    display: flex;
+    text-align: center;
+
+}
+
+
+/* format feature icon */
+.features-icon{
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    line-height: 50px;
+    border-radius: 8px;
+    color: #009688;
+    border: 1px solid #009688;
+
+   
+
+}
+
+/* format feature box text */
+.features-text{
+    padding: 0 20px;
+    text-align: initial;
+}
+
+/* format the menu div for smaller screen / mobiel device */
+@media screen and (max-width: 770px)
+{
+/* format title-text why choose us for smaller screen */
+.title-text h1 {
+    font-size: 35px;
+}
+
+/* format the feature div for smaller screen */
+.features{
+    flex-basis: 100%;
+}
+
+/* format the feature image div */
+.features-img{
+    flex-basis: 100%;
+}
+
+/* format the feature image */
+.features-img img{
+    width: 100%;
+}
+
+}
+/* end of @media */
+/* end this section for Feature Why Choose Us  */
+
+/* start of section for Services We Provide Better */
+
+/* format the section for service */
+#services{
+    width: 100%;
+    padding: 70px 0;
+    background: #efefef;
+}
+
+/* format service box div */
+.service-box{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+}
+
+/* format single service div */
+.single-service{
+    flex-basis: 40%;
+    text-align: center;
+    border-radius: 7px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+/* format single service image */
+.single-service img{
+    width: 100%;
+    border-radius: 7px;
+
+}
+
+/* format the overlay div on each image*/
+.overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    border-radius: 7px;
+    cursor: pointer;
+    /* use opacity and set to 0 to hide the overlay when not hover 
+    https://www.w3schools.com/cssref/css3_pr_opacity.asp */
+    opacity: 0;
+    background: linear-gradient(rgba(0,0,0,0.5), #009688);
+
+}
+
+/* hover effect on each image */
+.single-service:hover .overlay{
+
+    /* use opacity and set to 1 to display the overlay when hover */
+    opacity: 1;
+
+}
+
+/* format service desc inside the image */
+.service-desc{
+    width: 80%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: 1s;
+
+    font-family: sans-serif;
+}
+
+/* format hr inside the over lay service desc */
+hr{
+    background: #fff;
+    height: 2px;
+    border: 0;
+    margin: 15px auto;
+    width: 60%;
+
+}
+
+/* format the service desc h2 */
+.service-desc h2{
+    color: yellow;
+    font-weight: bolder;
+    font-family: sans-serif;
+}
+
+
+/* format the service desc p */
+.service-desc p{
+    font-size: 18px;
+    color: orange;
+    font-family: sans-serif;
+}
+
+/* hover effect for the service desc inside img */
+.single-service:hover .service-desc{
+
+    bottom: 40%;
+    opacity: 1;
+ 
+}
+
+/* format the service div for smaller screen / mobiel device */
+@media screen and (max-width: 770px)
+{
+
+/* format the single service div */
+.single-service{
+    flex-basis: 100%;
+    margin-bottom: 30px;
+
+}
+
+/* format the single service p */
+.single-service p{
+    font-size: 12px;
+    color: orangered;
+} 
+
+/* hover effect for the service desc inside img */
+.single-service:hover .service-desc{
+
+    bottom: 25% !important;
+ 
+} 
+
+}
+
+/* end of Service We Provide Better Section */
+
+
+
+/* start of section for Testimonial What Client Says */
+
+/* format the section for service */
+#testimonial{
+    width: 100%;
+    padding: 70px 0; 
+}
+
+
+/* format testimonial row div */
+.testimonial-row{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto;
+    align-items: flex-start;
+}
+
+
+/* format testimonial col div */
+.testimonial-col{
+    flex-basis: 28%;
+    padding: 10px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px 3px #00968814;
+    cursor: pointer;
+    transition: transform 0.5s;
+   
+}
+
+/* format testimonial col p */
+.testimonial-col p{
+    font-size: 14px;
+   
+}
+
+/* format the testimonial user div */
+.user{
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+
+}
+
+/* format testimonial user img */
+.user img{
+    width: 40px;
+    margin-right: 20px;
+    border-radius: 3px;
+
+}
+
+/* format testimonial twitter icon */
+.user-info .fa{
+    margin-left: 10px;
+    color: #27c0ff;
+    font-size: 20px;
+
+}
+
+/* format testimonial @user tag */
+.user-info small{
+    color: #27c0ff
+}
+
+/* add hover effect to the testimonial col */
+.testimonial-col:hover{
+    /* when hover the testimonial box when go up 7px */
+    transform: translateY(-7px);
+}
+
+/* format for smaller screen */
+@media screen  and (max-width: 770px)
+{
+
+    .testimonial-col{
+        flex-basis: 100%;
+
+    }
+
+
+}
+    
